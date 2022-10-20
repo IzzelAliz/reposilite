@@ -81,6 +81,9 @@ final class MetadataComparator<T> implements Comparator<T> {
     }
 
     private boolean isDigit(String string) {
+        if (string.isEmpty()) {
+            return false;
+        }
         for (char character : string.toCharArray()) {
             if (!Character.isDigit(character)) {
                 return false;
